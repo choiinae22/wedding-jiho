@@ -6,24 +6,25 @@
 <title>○○○ & 박지호</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
 <style>
 :root {
-  --cream:  #f5f0e8;
-  --cream2: #ede7d9;
+  --cream:  #ffffff;
+  --cream2: #f5f5f3;
   --green:  #3d4a2e;
   --green2: #556040;
   --green3: #8a9470;
   --text:   #2a2620;
   --muted:  #7a7060;
-  --line:   rgba(42,38,32,0.1);
+  --line:   rgba(42,38,32,0.08);
+  --block:  rgba(61,74,46,0.70);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{
   font-family:'Pretendard',-apple-system,sans-serif;
-  background:var(--cream);
+  background:#fff;
   color:var(--text);
   font-weight:300;
   overflow-x:hidden;
@@ -67,37 +68,41 @@ body{
   gap:0;
   user-select:none;
 }
-/* 필기체 스타일 — Dancing Script */
+/* 필기체 스타일 — Pinyon Script */
 .t-our{
-  font-family:'Dancing Script', cursive;
-  font-size:clamp(72px, 22vw, 108px);
-  font-weight:700;
+  font-family:'Great Vibes', cursive;
+  font-size:clamp(90px, 28vw, 136px);
+  font-weight:400;
   color:#fff;
-  line-height:0.88;
-  letter-spacing:-0.01em;
+  line-height:1.15;
+  letter-spacing:0.02em;
+  text-shadow:0 2px 24px rgba(0,0,0,0.15);
   opacity:0;
   transform:translateY(16px);
   transition:opacity 0.6s ease, transform 0.6s ease;
 }
 .t-wedding{
-  font-family:'Dancing Script', cursive;
-  font-size:clamp(72px, 22vw, 108px);
-  font-weight:700;
+  font-family:'Great Vibes', cursive;
+  font-size:clamp(90px, 28vw, 136px);
+  font-weight:400;
   color:#fff;
-  line-height:0.88;
-  letter-spacing:-0.01em;
+  line-height:1.15;
+  letter-spacing:0.02em;
+  text-shadow:0 2px 24px rgba(0,0,0,0.15);
   opacity:0;
   transform:translateY(16px);
   transition:opacity 0.6s ease 0.18s, transform 0.6s ease 0.18s;
 }
 .t-day{
-  font-family:'Dancing Script', cursive;
-  font-size:clamp(72px, 22vw, 108px);
-  font-weight:700;
+  font-family:'Great Vibes', cursive;
+  font-size:clamp(90px, 28vw, 136px);
+  font-weight:400;
   color:#fff;
-  line-height:0.88;
+  line-height:1.15;
   align-self:flex-end;
-  padding-right:12px;
+  padding-right:16px;
+  letter-spacing:0.02em;
+  text-shadow:0 2px 24px rgba(0,0,0,0.15);
   opacity:0;
   transform:translateY(16px);
   transition:opacity 0.6s ease 0.36s, transform 0.6s ease 0.36s;
@@ -203,7 +208,7 @@ body{
 .gallery-head{ padding:0 32px; text-align:center; margin-bottom:28px; }
 .gallery-grid{
   display:grid; grid-template-columns:1fr 1fr;
-  gap:2px; background:var(--cream2);
+  gap:2px; background:#e8e8e6;
 }
 .g-item{
   aspect-ratio:3/4; overflow:hidden;
@@ -253,7 +258,10 @@ body{
 
 /* ── QUOTE ── */
 .quote-sec{
-  background:var(--green); padding:60px 36px; text-align:center;
+  background:var(--block);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  padding:60px 36px; text-align:center;
   opacity:0; transform:translateY(20px);
   transition:opacity 0.7s ease, transform 0.7s ease;
 }
@@ -269,7 +277,10 @@ body{
 
 /* ── INFO ── */
 .info-card{
-  background:var(--green); border-radius:4px; overflow:hidden;
+  background:var(--block);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-radius:4px; overflow:hidden;
 }
 .info-row{
   display:flex; justify-content:space-between; align-items:baseline;
@@ -362,20 +373,23 @@ body{
 .gb-input:focus{ border-color:var(--green3); }
 textarea.gb-input{ height:86px; resize:none; }
 .gb-btn{
-  width:100%; background:var(--green); color:var(--cream);
+  width:100%; background:var(--block); color:#fff;
   border:none; border-radius:3px; padding:14px;
   font-family:'Pretendard',-apple-system,sans-serif;
   font-size:13px; font-weight:400; cursor:pointer;
   letter-spacing:0.06em; margin-top:4px; transition:background 0.2s;
 }
-.gb-btn:hover{ background:var(--green2); }
+.gb-btn:hover{ background:rgba(61,74,46,0.85); }
 .gb-entry{ padding:16px 0; border-bottom:0.5px solid var(--line); }
 .gb-name{ font-size:11px; font-weight:500; color:var(--green2); margin-bottom:5px; letter-spacing:0.04em; }
 .gb-msg{ font-size:13px; font-weight:300; color:#555; line-height:1.85; }
 
 /* ── FOOTER ── */
 footer{
-  padding:56px 32px 72px; text-align:center; background:var(--green);
+  padding:56px 32px 72px; text-align:center;
+  background:var(--block);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
 }
 .ft-names{
   font-size:20px; font-weight:300;
@@ -615,7 +629,7 @@ footer{
 <script>
 /* ── 타이핑 효과: Our / wedding / day 순서로 ── */
 const LINES = [
-  { el: 't-our',     text: 'Our',     speed: 90 },
+  { el: 't-our',     text: 'Happy',   speed: 80 },
   { el: 't-wedding', text: 'wedding', speed: 75 },
   { el: 't-day',     text: 'day',     speed: 90 },
 ];
